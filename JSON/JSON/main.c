@@ -29,7 +29,7 @@ cJSON* open_cfgfile(const char* fname)
         return NULL;
     }
     cJSON_Minify(src);
-    // ½âÎöÊı¾İ°ü
+    // è§£ææ•°æ®åŒ…
     root = cJSON_Parse(src);
     if (!root)
     {
@@ -45,7 +45,7 @@ cJSON* open_cfgfile(const char* fname)
 
 int close_cfgfile(cJSON* json)
 {
-    // ÊÍ·ÅÄÚ´æ¿Õ¼ä
+    // é‡Šæ”¾å†…å­˜ç©ºé—´
     cJSON_Delete(json);
 
     return 0;
@@ -89,29 +89,30 @@ cJSON* replace_value_from_cfgfile(cJSON* json, char* item, int replaceint)
 }
 
 int main(void)
-{
-    int numvalue = 110;
+{ 
+    unsigned char json_file[500];
     cJSON* json_before = open_cfgfile("create.json");
     char* node = cJSON_Print(json_before);
     printf("modify before:");
     printf(node);
     printf("\n");
-    
+    memcpy(json_file, node, strlen(node));
+
+    /*int numvalue = 10;
     cJSON* json_after = replace_value_from_cfgfile(json_before, "PCI", numvalue);
     char* node1 = cJSON_Print(json_after);
-    printf("modify1 after:");
-    printf(node1);
-    printf("\n");
-    cJSON* json_after1 = replace_value_from_cfgfile(json_after, "SCS", numvalue);
-    char* node2 = cJSON_Print(json_after1);
-    printf("modify2 after:");
-    printf(node2);
+    printf("modify after:");
+    printf(node1);*/
 
-    FILE* fp = fopen("create.json", "w+");
-    char* buff = cJSON_Print(json_after1);
-    printf("%d",strlen(buff));
-    fwrite(buff, strlen(buff), 1, fp);
-    //ÇåÀí¹¤×÷
+    json_file[strlen(node) + 1] = '\0';
+    printf("copy content:");
+    printf(json_file);
+    printf("\n");
+    FILE* fp = fopen("create_1.json", "w+");
+    //char* buff = cJSON_Print(json_after);
+    printf("%d",strlen(json_file));
+    fwrite(json_file, strlen(json_file), 1, fp);
+    //æ¸…ç†å·¥ä½œ
     fclose(fp);
     close_cfgfile(json_before);
     
