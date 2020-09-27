@@ -1,6 +1,7 @@
 {
 	"PLMN": 40000,
 	"TAC": 120,
+	"GCI": 0,
 	"Band": 20,
 	"Bandwidth(MHz)": 70,
 	"PCI": 0,
