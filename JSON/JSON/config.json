@@ -1,0 +1,34 @@
+{
+    "RF1":{
+      "sampling_freq"   :40000000,
+      "tx_lo_freq"      :700000000,
+      "tx1_attenuation" :20000,
+      "tx2_attenuation" :20000,
+      "rx_lo_freq"      :700000000,
+      "rx1_gc"          :1, /* 0: MGC; 1: Fast AGC; 2: Slow AGC */
+      "rx2_gc"          :1, /* 0: MGC; 1: Fast AGC; 2: Slow AGC */
+      "rx1_gain"        :5,
+      "rx2_gain"        :5,
+      "ref_clock"       :0, /* 0: Internal Reference; 1: External Reference */
+      "vco_select"      :1, /* 0: ADF4001;  1: AUXDAC1 */
+      "adf4001_rcount"  :10, /* set calibrate clock to 5MHz(external input) when vco_select == 0 */
+      "adf4001_ncount"  :26, /* set calibrate clock to 5MHz(external input) when vco_select == 0 */
+      "auxdac1"         :0, /* mV */
+      "tx_ant"          :1, /* 1: TRX1 port; 2: TRX2 port */
+      "rx_ant"          :1, /* 1: RX1 port; 2: RX2 port */
+      "tdd_mod_en"      :0, /* 1: TDD mode; 0: FDD mode */
+      "rx_ant_en"       :1, /* 1: Enable RX port; 0: Disable RX port(when tdd_mod_en == 1) */ 
+      "tx_mod"          :14 /* Default: 0x0E, //b0111_0: 18Mbps  QPSK 3/4 rate */
+    }
+}
+
+/* *************** tx modulation mode ******************* *
+ * 0x1A, //b1101_0:  6Mbps  BPSK 1/2rate
+ * 0x1E, //b1111_0:  9Mbps  BPSK 3/4rate
+ * 0x0A, //b0101_0: 12Mbps  QPSK 1/2rate
+ * 0x0E, //b0111_0: 18Mbps  QPSK 3/4rate
+ * 0x12, //b1001_0: 24Mbps 16QAM 1/2rate
+ * 0x16, //b1011_0: 36Mbps 16QAM 3/4rate
+ * 0x02, //b0001_0: 48Mbps 64QAM 2/3rate
+ * 0x06, //b0011_0: 54Mbps 64QAM 3/4rate
+ * ****************************************************** */	
