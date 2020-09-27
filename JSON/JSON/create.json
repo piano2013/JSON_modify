@@ -1,13 +1,13 @@
 {
-	"NR-ARFCN":	400,
-	"GSCN":	120,
-	"SCS":	110,
-	"Band":	2000,
-	"MCC":	700000,
-	"MNC":	123456,
-	"DMRS-INDEX":	1111,
-	"RSRP":	500,
-	"PCI":	110,
-	"TAC":	0,
-	"CI":	1
+	"PLMN": 40000,
+	"TAC": 120,
+	"Band": 20,
+	"Bandwidth(MHz)": 70,
+	"PCI": 0,
+	"SC_Spacing": 15,
+	"SSB_Beam_Num": 0,
+	"Ser_SSB_Index": 0,
+	"SSB_GSCN": 0,
+	"SSB_frequery": 0,
+	"SSB_rsrp": 0
 }
