@@ -1,0 +1,15 @@
+{
+	"PLMN":	"1234",
+	"TAC":	"14",
+	"GCI_DEC":	"43262",
+	"GCI_HEX":	"4326",
+	"Band":	"234",
+	"Bandwidth(MHz)":	"1245",
+	"PCI":	" ",
+	"SC_Spacing":	"34",
+	"SSB_Beam_Num":	"345",
+	"Ser_SSB_Index":	" ",
+	"SSB_GSCN":	" ",
+	"SSB_frequency(KHz)":	" ",
+	"SSB_rsrp(dBm)":	" "
+}Ì

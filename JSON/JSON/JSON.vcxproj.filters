@@ -26,5 +26,13 @@
     <ClInclude Include="cJSON.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="unistd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="create.json">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

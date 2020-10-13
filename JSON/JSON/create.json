@@ -1,14 +1,15 @@
 {
-	"PLMN": 40000,
-	"TAC": 120,
-	"GCI": 0,
-	"Band": 20,
-	"Bandwidth(MHz)": 70,
-	"PCI": 0,
-	"SC_Spacing": 15,
-	"SSB_Beam_Num": 0,
-	"Ser_SSB_Index": 0,
-	"SSB_GSCN": 0,
-	"SSB_frequery": 0,
-	"SSB_rsrp": 0
+	"PLMN": " ",
+	"TAC": " ",
+	"GCI_DEC": " ",
+	"GCI_HEX": " ",
+	"Band": " ",
+	"Bandwidth(MHz)": " ",
+	"PCI": " ",
+	"SC_Spacing": " ",
+	"SSB_Beam_Num": " ",
+	"Ser_SSB_Index": " ",
+	"SSB_GSCN": " ",
+	"SSB_frequency(KHz)": " ",
+	"SSB_rsrp(dBm)": " "
 }
